@@ -1,6 +1,6 @@
 # Proyecto MSK - Sistema de Gestión de Pedidos
 
-Sistema web desarrollado para **MSK Importaciones SAC**, empresa dedicada a la importación y distribución de pernería, tornillería y ferretería en el Perú.
+Sistema web desarrollado para **MSK Importaciones SAC**, empresa ficticia dedicada a la importación y distribución de pernería, tornillería y ferretería en el Perú.
 
 ## Descripción
 
