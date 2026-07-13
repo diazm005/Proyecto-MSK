@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="login.css">
+<div class="login-wrapper">
+  <div class="login-card">
+    <div class="login-logo">
+      <img src="/images/msk-logo.webp" alt="MSK Logo"/>
+    </div>
+
+    <h2>Gestion de Pedidos</h2>
+    <p class="login-subtitle">MSK Importaciones SAC</p>
+
+    <div class="form-group">
+      <label>Usuario</label>
+      <input type="text" class="form-control" [(ngModel)]="username" placeholder="Ingresa tu usuario"/>
+    </div>
+
+    <div class="form-group mt-3">
+      <label>Contraseña</label>
+      <input type="password" class="form-control" [(ngModel)]="password" placeholder="Ingresa tu contraseña"/>
+    </div>
+
+    <div class="error-msg" *ngIf="error">{{ error }}</div>
+
+    <button class="btnIngresar" (click)="login()">Ingresar</button>
+
+  </div>
+</div>

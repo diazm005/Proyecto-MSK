@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="navbar.css">
+<header>
+  <div class="menu-principal">
+    <div class="logo">
+      <a routerLink="/productos">
+        <img src="/images/msk-logo.webp" alt="Logo">
+      </a>
+    </div>
+    <div class="menu">
+      <nav>
+        <a routerLink="/productos"
+           routerLinkActive="activo"
+           class="text-link">
+          PRODUCTOS
+        </a>
+        <a routerLink="/clientes"
+           routerLinkActive="activo"
+           class="text-link">
+          CLIENTES
+        </a>
+        <a routerLink="/pedidos"
+           routerLinkActive="activo"
+           class="text-link">
+          PEDIDOS
+        </a>
+      </nav>
+    </div>
+    <div class="contact">
+      <button class="btn-salir" (click)="logout()">
+        Cerrar sesion
+      </button>
+    </div>
+  </div>
+</header>

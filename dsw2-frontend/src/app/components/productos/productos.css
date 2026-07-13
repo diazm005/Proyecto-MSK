@@ -1,0 +1,112 @@
+.cont-productos{
+    min-height: 100vh;
+    padding: 24px;
+    background:
+        linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+        url('/images/fondo-mskii.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+h2{
+    color: white;
+}
+.btnPrimario{
+    border: none;
+    background:  #008696;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    width: 100%;
+}
+.form-control{
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+.btnEditar{
+    border: none;
+    background: #dda50b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin: 5px;
+    
+}
+.btnEliminar{
+    border: none;
+    background: #ff0000;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin: 5px;
+    
+}
+.cont-tabla {
+    width: 100%;
+    max-height: 600px;
+    overflow-y: scroll;
+    overflow-x: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.tablaPrincipal {
+    width: 100%;
+    min-width: 1000px;
+    border-collapse: collapse;
+    margin-top: 0;
+    background: #fff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.tablaPrincipal thead{
+    background: linear-gradient(135deg, #008696, #00AEC1 );
+    color: white;
+}
+
+.tablaPrincipal thead th {
+    padding: 18px;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    background: linear-gradient(135deg, #008696);
+    color: white;
+    z-index: 2;
+}
+
+.tablaPrincipal td{
+    padding: 18px;
+    border-bottom: 1px solid #eef1f6;
+    color: #444;
+    font-size: 15px;
+}
+
+.tablaPrincipal tbody tr:nth-child(even){
+    background-color: #f8faff;
+}
+
+.tablaPrincipal tbody tr{
+    transition: all .3s ease;
+}
+
+.tablaPrincipal tbody tr:hover{
+    background-color: #edf3ff;
+}
+
+.tablaPrincipal td:first-child{
+    font-weight: 700;
+    color: #00AEC1;
+}
+
+.tablaPrincipal td:nth-child(4){
+    font-weight: 600;
+    color: #00AEC1;
+}
+
+.tablaPrincipal td:nth-child(5){
+    font-weight: 600;
+}

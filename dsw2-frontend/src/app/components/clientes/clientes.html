@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="clientes.css">
+<div class="cont-clientes">
+  <div class="container mt-4">
+  <h2>Clientes</h2>
+
+  <form class="row g-2 mb-4" (ngSubmit)="guardar()">
+    <div class="col-md-4">
+      <input class="form-control" placeholder="Nombre" [(ngModel)]="form.nombre" name="nombre" required/>
+    </div>
+    <div class="col-md-3">
+      <input class="form-control" placeholder="Email" [(ngModel)]="form.email" name="email"/>
+    </div>
+    <div class="col-md-3">
+      <input class="form-control" placeholder="Telefono" [(ngModel)]="form.telefono" name="telefono"/>
+    </div>
+    <div class="col-md-2">
+      <button class="btnPrimario" type="submit">{{ editando ? 'Actualizar' : 'Agregar' }}</button>
+    </div>
+  </form>
+  <div class="cont-tabla">
+    <table class="tablaPrincipal">
+    <thead>
+      <tr>
+        <th>ID</th><th>Nombre</th><th>Email</th><th>Teléfono</th><th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of clientes">
+        <td>{{ c.id }}</td>
+        <td>{{ c.nombre }}</td>
+        <td>{{ c.email }}</td>
+        <td>{{ c.telefono }}</td>
+        <td>
+          <button class="btnEditar" (click)="editar(c)">Editar</button>
+          <button class="btnEliminar" (click)="eliminar(c.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+</div>

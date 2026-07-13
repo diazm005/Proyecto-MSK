@@ -1,0 +1,6 @@
+<link rel="stylesheet" href="app.css">
+<app-navbar *ngIf="mostrarNavbar()"></app-navbar>
+
+<div [class.contenido]="mostrarNavbar()">
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="pedidos.css">
+<div class="cont-pedidos">
+  <div class="container mt-4">
+  <h2>Pedidos</h2>
+
+  <form class="row g-2 mb-4" (ngSubmit)="guardar()">
+    <div class="col-md-4">
+      <select class="form-control" [(ngModel)]="form.clienteId" name="clienteId">
+        <option value="">Selecciona cliente</option>
+        <option *ngFor="let c of clientes" [value]="c.id">{{ c.nombre }}</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <input class="form-control" placeholder="Total" type="number" [(ngModel)]="form.total" name="total"/>
+    </div>
+    <div class="col-md-3">
+      <select class="form-control" [(ngModel)]="form.estado" name="estado">
+        <option value="PENDIENTE">PENDIENTE</option>
+        <option value="PROCESADO">PROCESADO</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <button class="btnPrimario w-100" type="submit">Agregar</button>
+    </div>
+  </form>
+  <div class="cont-tabla">
+    <table class="tablaPrincipal">
+    <thead>
+      <tr>
+        <th>ID</th><th>Fecha</th><th>Estado</th><th>Total</th><th>Cliente</th><th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of pedidos">
+        <td>{{ p.id }}</td>
+        <td>{{ p.fecha | date:'dd/MM/yyyy HH:mm' }}</td>
+        <td>
+          <span class="badge" [ngClass]="p.estado === 'PROCESADO' ? 'badgeProcesado' : 'badgePendiente'">
+            {{ p.estado }}
+          </span>
+        </td>
+        <td>S/ {{ p.total }}</td>
+        <td>{{ p.cliente?.nombre }}</td>
+        <td>
+          <button class="btnEliminar" (click)="eliminar(p.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+</div>

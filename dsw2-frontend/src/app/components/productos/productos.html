@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="productos.css">
+<div class="cont-productos">
+  <div class="container mt-4">
+  <h2>Productos</h2>
+
+  <form class="row g-2 mb-4" (ngSubmit)="guardar()">
+    <div class="col-md-3">
+      <input class="form-control" placeholder="Nombre" [(ngModel)]="form.nombre" name="nombre" required/>
+    </div>
+    <div class="col-md-3">
+      <input class="form-control" placeholder="Descripcion" [(ngModel)]="form.descripcion" name="descripcion"/>
+    </div>
+    <div class="col-md-2">
+      <input class="form-control" placeholder="Precio" type="number" [(ngModel)]="form.precio" name="precio"/>
+    </div>
+    <div class="col-md-2">
+      <input class="form-control" placeholder="Stock" type="number" [(ngModel)]="form.stock" name="stock"/>
+    </div>
+    <div class="col-md-2">
+      <button class="btnPrimario" type="submit">{{ editando ? 'Actualizar' : 'Agregar' }}</button>
+    </div>
+  </form>
+  <div class="cont-tabla">
+    <table class="tablaPrincipal">
+    <thead>
+      <tr>
+        <th>ID</th><th>Nombre</th><th>Descripcion</th><th>Precio</th><th>Stock</th><th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of productos">
+        <td>{{ p.id }}</td>
+        <td>{{ p.nombre }}</td>
+        <td>{{ p.descripcion }}</td>
+        <td>S/ {{ p.precio }}</td>
+        <td>{{ p.stock }}</td>
+        <td>
+          <button class="btnEditar" (click)="editar(p)">Editar</button>
+          <button class="btnEliminar" (click)="eliminar(p.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+</div>
