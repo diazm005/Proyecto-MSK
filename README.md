@@ -8,7 +8,7 @@ El sistema permite gestionar productos, clientes y pedidos de forma digital, ree
 
 ## Tecnologías utilizadas
 
-### Backend — Spring Boot 3.2.5
+### Backend — Spring Boot: 3.2.5 - Java: 17 - Spring Cloud OpenFeign: 4.1.0 - JWT (jjwt): 0.11.5 - H2 Database: runtime - jaxb2-maven-plugin: 3.1.0
 - **REST API** — CRUD de Productos, Clientes y Pedidos
 - **SOAP** — Servicio web para consulta de productos con contrato WSDL
 - **Threads** — Procesamiento asíncrono de pedidos en segundo plano
@@ -17,7 +17,7 @@ El sistema permite gestionar productos, clientes y pedidos de forma digital, ree
 - **Spring Security + JWT** — Autenticación y protección de endpoints
 - **H2 Database** — Base de datos en memoria
 
-### Frontend — Angular 17
+### Frontend — Angular CLI: 21.2.7 - Node.js: 24.14.1 - npm: 11.11.0
 - Componentes standalone
 - Interceptor HTTP para JWT automático
 - Auth Guard para protección de rutas
